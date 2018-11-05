@@ -64,6 +64,8 @@ ZSH_CUSTOM=$HOME/.dotfiles/custom
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  osx
+  golang
 )
 
 source $ZSH/oh-my-zsh.sh
