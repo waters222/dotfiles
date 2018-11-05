@@ -99,6 +99,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+unameOut="$(uname -s)"
+case "${unameOut}" in
+	Linux*) export ZSH_THEME="powerlevel9k/powerlevel9k";;
+	*) ZSH_THEME="honukai/honukai"
+esac
+
 if [ -f ~/.zshrc_path ]; then
 	. ~/.zshrc_path
 fi
