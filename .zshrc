@@ -98,13 +98,15 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-unameOut="$(uname -s)"
-case "${unameOut}" in
-	Linux*) export ZSH_THEME="powerlevel9k/powerlevel9k";;
-	*) ZSH_THEME="honukai/honukai"
+
+case "$(uname -s)" in
+	Linux*) ~/.dotfiles/linux-env.sh;;
+	Darwin*) ~/.dotfiles/osx-env.sh;;
+	*) export ZSH_THEME="honukai/honukai"
 esac
 
 if [ -f ~/.zshrc_path ]; then
 	. ~/.zshrc_path
 fi
+
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
