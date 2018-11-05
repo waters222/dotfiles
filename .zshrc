@@ -98,15 +98,16 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-case "$(uname -s)" in
-	Linux*) ~/.dotfiles/linux-env.sh;;
-	Darwin*) ~/.dotfiles/osx-env.sh;;
+unameOut=$(uname -s)
+case "${unameOut}}" in
+	Linux*) . $HOME/.dotfiles/linux-env.sh;;
+	Darwin*) . $HOME/.dotfiles/osx-env.sh;;
 	*) export ZSH_THEME="honukai/honukai"
 esac
 
 if [ -f ~/.zshrc_path ]; then
 	. ~/.zshrc_path
 fi
+source  /home/water/anaconda3/etc/profile.d/conda.sh
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
