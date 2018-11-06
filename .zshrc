@@ -105,9 +105,11 @@ case "${unameOut}}" in
 	*) export ZSH_THEME="honukai/honukai"
 esac
 
-if [ -f ~/.zshrc_path ]; then
-	. ~/.zshrc_path
+if [ -f $HOME/.zshrc_path ]; then
+	. $HOME/.zshrc_path
 fi
-source  /home/water/anaconda3/etc/profile.d/conda.sh
+if [ -f $HOME/anaconda3/etc/profile.d/conda.sh ]; then
+	source $HOME/anaconda3/etc/profile.d/conda.sh
+fi
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
