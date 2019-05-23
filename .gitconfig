@@ -1,0 +1,7 @@
+[credential]
+	helper = store
+[user]
+	email = weishi258@gmail.com
+	name = wei.shi
+[includeIf "gitdir:$GOPATH/src/github.com/PolymathNetwork"]
+	path = $GOPATH/src/github.com/PolymathNetwork/.gitconfig
