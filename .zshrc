@@ -113,8 +113,8 @@ if [ -f $HOME/anaconda3/etc/profile.d/conda.sh ]; then
 fi
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-PATH="$HOME/.node/bin/:$PATH"
-NODE_PATH="$HOME/.node/mode_modules:$NODE_PATH"
+PATH="$HOME:~/.npm-global/bin:/.node/bin/:$PATH"
+NODE_PATH="$HOME/.node/node_modules:$NODE_PATH"
 if [ $commands[kubectl] ]; then 
 	source <(kubectl completion zsh); 
 fi
