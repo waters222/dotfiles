@@ -118,3 +118,5 @@ NODE_PATH="$HOME/.node/node_modules:$NODE_PATH"
 if [ $commands[kubectl] ]; then 
 	source <(kubectl completion zsh); 
 fi
+
+export PATH="$HOME/.local/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

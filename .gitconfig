@@ -3,5 +3,5 @@
 [user]
 	email = weishi258@gmail.com
 	name = wei.shi
-[includeIf "gitdir:~/base/coursera"]
-	path = ~/base/coursera/.gitconfig
+[includeIf "gitdir:~/base"]
+	path = ~/base/.gitconfig
